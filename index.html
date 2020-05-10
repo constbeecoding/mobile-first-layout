@@ -4,64 +4,91 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
 </head>
 
-<!-- BODY OF PROJECT-->
 
 <body>
+ <!-- HEADER/MAIN NAV-->   
 
- <!-- Main Nav-->   
+ <header id="top" class="main-header">
+    <div class="container">
+        <h1 class="name" href="#">Bee Crouch</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-    <nav class="main-nav">
-        <ul>
-            <li class="name" href="#">Bee Crouch</li>
-            <li><a>Home</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        </ul>
-    </nav>
+<!--PAGE CONTENT-->
+    <div class="container">  
+        <main>
+            <!-- Intro Top of Page-->
+            <section id="intro">
+                 <img src="images/responsive-layout-profile.png" alt="A cartoon portrait of a person." class="intro-img">
+                <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
+            </section>
+            
+            <!-- All the Portfolio Goodness-->
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+                <div>
 
-<!--Header -->
-    <header>
-        <img src="images/responsive-layout-profile.png" alt="A cartoon portrait of a person." class="img">
-        <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
-    </header>
+                    <img src="images/portfolio-1.png"> 
+                    <headline>Marketing Page</headline>
+                    <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
 
-<!--Main Content Area-->
-    <main>
-        <section id="portfolio">
+                    <img src="images/portfolio-2.png"> 
+                    <headline>Search Page</headline>
+                    <p>This project searches through a specific database to find information that the user is trying to look up.</p>
 
+                    <img src="images/portfolio-3.png"> 
+                    <headline>Travel App</headline>
+                    <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
 
-        </section>
-       
+                    <img src="images/portfolio-4.png"> 
+                    <headline>Map of Favorite Spots</headline>
+                    <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it yourself walking tour.</p>
 
-    </main>
+                    <img src="images/portfolio-5.png"> 
+                    <headline>Photo Gallery</headline>
+                    <p>This project shows pictures from a recent trip to the view and allows them to easily navigate through photos.</p>
 
+                    <img src="images/portfolio-6.png"> 
+                    <headline>Calculator</headline>
+                    <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
 
-<!--Contact-->    
-    <section id="contact">
-        <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
-        <p>Phone +1 (111) 555-1234</p>
-        <p>Email email@yoursite.com</p>
-    </section>
+                </div>
 
+            </section>
+            
+            <!--Contact-->    
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+                <p>Phone +1 (111) 555-1234</p>
+                <p>Email email@yoursite.com</p>
+            </section>
+        </main>
+    </div> 
 </body>
 
 <!-- FOOTER -->
 <footer>
-    <ul>
-        <li class="name" href="#">Bee Crouch</li>
-        <li><a>Home</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+    <h1 class="name" href="#">Bee Crouch</h1>
+    <ul class="footer-nav">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-
-
-
 </footer>
 
 </html>
