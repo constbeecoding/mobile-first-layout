@@ -5,4 +5,5 @@ My Second Front End Web Development Degree
 
 
 ## Struggles
-When adding a Google Font, I had an issue whilst linking it to HTML, and then using the Font-Family Rule in CSS. This was using the 'Raleway' Normal Font.
+Forgot a basic thing such as css/styles.css to link the css stylsheet path. Forgot css/.
+
