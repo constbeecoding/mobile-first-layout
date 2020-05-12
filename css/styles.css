@@ -1,41 +1,163 @@
-/*Base Styles*/
+/*Base Element Styles*/
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
-
+    background-color:  #f7f5f0;
+    margin: 0;
 }
 
+p {
+    font-size: 1.4em;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 1.8em;
+    padding: 20px;
+    
 
 
+}
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+h2,
+h3 {
+    font-size: 2em;
+    text-align: center;
+    color: grey; 
+}
+
+img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    padding 20px;
+}
+ /*Link Styles*/
+a {
+    text-decoration: none;
+    color: grey;
+}
+a:hover {
+    color: seagreen;
+}
 
 /* ===== Base Layout Styles=====*/
 
+/*Header and Main Navigation*/
+.main-header{
+    background-color: black;
+}
 
-/*Navigation*/
+.intro-img {
+    display: block;
+    margin: auto;
+
+}
+
+.main-nav{
+    width: 100%;
+    background: black;
+}
+.nav li{
+    margin-top: 5px;
+}
+
+.name {
+    font-size: 1.5em;
+    margin: 0;
+    float: left;
+
+}
+/*Page Content Styles*/
+
+.intro-img {
+    
+}
 
 
+/*Footer-------------------------------*/
+
+.footer-nav {
+    
+
+}
 
 /* =====Media Queries=====*/
 
 /* Note: Hide Footer Nav on Mobile - only display "back to top" */
 
 @media (min-width: 769px)  {
-    .container {
-        width: 70%;
-        max-width:  1000px;
-        margin:0 auto;
+    .name {
+        text-align: center;
+
+    }
+   
+    .main-header {
+
+        
+    }
+  
+    .portfolio {
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid red;
+    }
+
+    .container p {
+        text-align: center;
+    }
+
+    .intro-img {
+        
+
+    }
+    .portfolio-img {
+        width: 90%;
+        padding: 5px;
+        margin: 0 auto;
     }
 
 
-}
+    
+    @media (min-width: 1024px)  {
+        .name {
+            float:left;
+    
+        }
+       
+        .main-header {
+    
+            
+        }
+      
+        .portfolio {
+            width: 80%;
+            margin: 0 auto;
+            border: 2px solid red;
+        }
+    
+        .container p {
+            text-align: center;
+        }
+    
+    
+        .portfolio-img {
+            width: 90%;
+            padding: 5px;
+            margin: 0 auto;
+        }
+    
+    
+    }
 
-@media (min-width: 1024px) {
-
-
-
-
-} 
-
+/*Float Clearfix-------------------------------*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
