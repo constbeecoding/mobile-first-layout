@@ -13,16 +13,16 @@ p {
     font-size: 1.4em;
     font-weight: lighter;
     text-align: center;
-    margin-bottom: 1.8em;
-    padding: 20px;
-    
-
-
-}
-li {
-    list-style-type: none;
+    margin-bottom: 10px;
     padding: 10px;
 }
+
+li {
+    list-style-type: none;
+    font-size: 1.2em;
+    background-color: white;
+}
+
 
 h2,
 h3 {
@@ -31,53 +31,59 @@ h3 {
     color: grey; 
 }
 
-img {
-    max-width: 90%;
-    display: block;
+nav {
     margin: auto;
-    padding 20px;
+    width: 100%;
+    padding: 10px;
+
 }
  /*Link Styles*/
 a {
     text-decoration: none;
-    color: grey;
+    padding: 10px;
 }
 a:hover {
     color: seagreen;
 }
 
+
 /* ===== Base Layout Styles=====*/
 
 /*Header and Main Navigation*/
-.main-header{
-    background-color: black;
-}
-
 .intro-img {
     display: block;
     margin: auto;
-
+    clear: both;
 }
 
-.main-nav{
+.portfolio-img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    padding: 20px;
+
+}
+.portfolio {
     width: 100%;
-    background: black;
+
 }
+
 .nav li{
+    display: block;
     margin-top: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 .name {
-    font-size: 1.5em;
+    text-align: center;
+    font-size: 2em;
     margin: 0;
-    float: left;
-
+    color: grey;
 }
+
 /*Page Content Styles*/
 
-.intro-img {
-    
-}
 
 
 /*Footer-------------------------------*/
@@ -92,65 +98,16 @@ a:hover {
 /* Note: Hide Footer Nav on Mobile - only display "back to top" */
 
 @media (min-width: 769px)  {
-    .name {
-        text-align: center;
+ 
+    
+    /* placeholder*/
 
-    }
-   
-    .main-header {
-
-        
-    }
-  
-    .portfolio {
-        width: 80%;
-        margin: 0 auto;
-        border: 2px solid red;
-    }
-
-    .container p {
-        text-align: center;
-    }
-
-    .intro-img {
+}
+    
+@media (min-width: 1024px)  {
         
 
-    }
-    .portfolio-img {
-        width: 90%;
-        padding: 5px;
-        margin: 0 auto;
-    }
-
-
-    
-    @media (min-width: 1024px)  {
-        .name {
-            float:left;
-    
-        }
-       
-        .main-header {
-    
-            
-        }
-      
-        .portfolio {
-            width: 80%;
-            margin: 0 auto;
-            border: 2px solid red;
-        }
-    
-        .container p {
-            text-align: center;
-        }
-    
-    
-        .portfolio-img {
-            width: 90%;
-            padding: 5px;
-            margin: 0 auto;
-        }
+    /*placeholder*/
     
     
     }
@@ -160,4 +117,4 @@ a:hover {
     content: "";
     display: table;
     clear: both;
-  }
+}
