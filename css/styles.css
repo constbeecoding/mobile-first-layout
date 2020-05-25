@@ -75,6 +75,7 @@ a {
 a:hover {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
@@ -94,6 +95,7 @@ a:visited {
     width: 100%;
     padding: 70px;
     -webkit-clip-path: circle(150px at center);
+    clip-path: circle(150px at center);
 }
 
 .intro {
@@ -188,8 +190,8 @@ a:visited {
         float: right;
         max-width: 30%;
         padding: 20px;
-        shape-outside: circle(100px at center);
-        -webkit-clip-path: circle(123px at center)
+        -webkit-clip-path: circle(123px at center);
+        clip-path: circle(123px at center);
     }
 
     .name {
@@ -239,19 +241,24 @@ a:visited {
 
     .footer-name {
         display: block;
-        margin: 15px 0;
+        margin: 10px 0;
         float: left;
         
     }
     .footer-nav {
-      display: block;
-    }
-    
-    .footer-nav li {
-        padding: 15px;
-        margin: 5px;
-        float: right;
-    }
+        display: block;
+      }
+      
+      .footer-nav ul {
+          float: right;
+      }
+  
+      .footer-nav li {
+          padding: 15px;
+          margin: 5px;
+      }
+  
+
     .top {
          display: none;
      }
@@ -279,6 +286,7 @@ a:visited {
         float: right;
         margin: 0 20px 45px 0;
         -webkit-clip-path: circle(139px at 49.05% 50.3%);
+        clip-path: circle(139px at 49.05% 50.3%);
     }
 
     .name {
@@ -291,7 +299,6 @@ a:visited {
         width: 100%;
         margin: auto;
         display: block;
-        padding: ;
     }
 
     .intro {
@@ -342,11 +349,15 @@ a:visited {
       display: block;
     }
     
+    .footer-nav ul {
+        float: right;
+    }
+
     .footer-nav li {
         padding: 15px;
         margin: 5px;
-        float: right;
     }
+
     .top {
          display: none;
      }
