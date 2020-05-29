@@ -6,8 +6,9 @@
 body {
     font-family: 'Raleway', sans-serif;
     background-color:  #98cc9c;
-    margin: 0;
+    margin: 0 auto;
     color: black;
+    max-width: 1400px;
 }
 
 p {
