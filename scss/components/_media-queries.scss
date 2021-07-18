@@ -2,6 +2,8 @@
 /*               Media Queries                  */
 /* ============================================ */
 
+$portfolio-bg: #fff;
+
 /* Note: Hide Footer Nav on Mobile - only display "back to top" */
 
 @media (min-width: 768px)  {
@@ -49,7 +51,7 @@
 
     .portfolio {
         display: block;  
-        background-color: white;
+        background-color: $portfolio-bg;
         clear: both;
      }
      
@@ -115,8 +117,7 @@
     .intro-img {
         float: right;
         margin: 0 20px 45px 0;
-        -webkit-clip-path: circle(139px at 49.05% 50.3%);
-        clip-path: circle(139px at 49.05% 50.3%);
+        border-radius: 50%;
     }
 
     .name {
@@ -146,8 +147,9 @@
 
     .portfolio {
         display: block;  
-        background-color: white;
+        background-color: $portfolio-bg;
         clear: both;
+        border-radius: 5%;
      }
      
     .portfolio-img {
