@@ -1,0 +1,171 @@
+/* ============================================ */
+/*                Base Styles                   */
+/* ============================================ */
+
+$base-color: #98cc9c;
+$accent-color: #fff;
+
+/*Base Element Styles*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color:  $base-color;
+    margin: 0 auto;
+    color: black;
+    max-width: 1400px;
+}
+
+p {
+    font-size: 1.4em;
+    font-weight: lighter;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 10px;
+    letter-spacing: .1em;
+}
+
+li {
+    display: block;
+    list-style-type: none;
+    font-size: 1.2em;
+    background-color: $accent-color;
+    margin: 5px 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    color: $accent-color;
+    background-color: $base-color;
+
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: $accent-color;
+}
+h3 {
+    font-size: 2em;
+    text-align: center;
+    color: grey; 
+}
+
+ul {
+    margin: 0;
+    width: 100%;
+    padding-left: 0;
+
+}
+
+footer {
+    border-top: solid $accent-color 2px;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+}
+
+ /*Link Styles*/
+ a {
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+a:hover {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+a:visited {
+    color: purple
+}
+
+/* ===== Base Layout Styles=====*/
+
+/*Header and Main Navigation*/
+.intro-img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 70px;
+    border-radius: 50%;
+}
+
+.intro {
+    margin: 0 20px 20px 20px;
+
+}
+
+.name {
+    margin: 20px;
+
+}
+
+.headergrey {
+    color: grey;
+    text-transform: uppercase;
+
+}
+
+.portfolio-img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+.portfolio-img:hover {
+    opacity: 0.5;
+
+}
+
+.portfolio {
+    width: 100%;
+    background-color: $accent-color;
+    padding: 50px 0;
+}
+
+.nav li{
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+ 
+
+.skills li {
+    background-color: $base-color;
+
+
+}
+.footer-name {
+    font-size: 2em;
+    color: white;
+    background-color: $base-color;
+    margin: auto;
+    float: left;
+}
+
+.top{
+    background-color: $base-color;
+    margin: auto;
+    float: right;
+}
+
+/*Footer Navigation*/
+.bottom {
+    display: none;
+}
