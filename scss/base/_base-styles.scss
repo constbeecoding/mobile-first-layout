@@ -2,8 +2,10 @@
 /*                Base Styles                   */
 /* ============================================ */
 
-$base-color: #98cc9c;
-$accent-color: #fff;
+$base-color: #6b5d8c;
+$main-text: #fff;
+$portfolio-bg: #fff;
+
 
 /*Base Element Styles*/
 * {
@@ -14,7 +16,7 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color:  $base-color;
     margin: 0 auto;
-    color: black;
+    color: $main-text;
     max-width: 1400px;
 }
 
@@ -31,7 +33,7 @@ li {
     display: block;
     list-style-type: none;
     font-size: 1.2em;
-    background-color: $accent-color;
+    background-color: $main-text;
     margin: 5px 10px;
     padding: 20px;
     text-align: center;
@@ -42,7 +44,7 @@ h1 {
     text-align: center;
     font-size: 2em;
     margin: 0;
-    color: $accent-color;
+    color: $main-text;
     background-color: $base-color;
 
 }
@@ -50,7 +52,7 @@ h1 {
 h2 {
     font-size: 2em;
     text-align: center;
-    color: $accent-color;
+    color: $main-text;
 }
 h3 {
     font-size: 2em;
@@ -66,7 +68,7 @@ ul {
 }
 
 footer {
-    border-top: solid $accent-color 2px;
+    border-top: solid $main-text 2px;
     bottom: 0;
     padding: 20px;
     width: 100%;
@@ -88,7 +90,7 @@ a:hover {
 }
 
 a:visited {
-    color: purple
+    color: #000;
 }
 
 /* ===== Base Layout Styles=====*/
@@ -112,6 +114,12 @@ a:visited {
 
 }
 
+.name, .footer-name {
+    font-family: 'Caveat', cursive;
+    color:#f7dbf0;
+    font-size: 3em;
+}
+
 .headergrey {
     color: grey;
     text-transform: uppercase;
@@ -133,7 +141,7 @@ a:visited {
 
 .portfolio {
     width: 100%;
-    background-color: $accent-color;
+    background-color: $portfolio-bg;
     padding: 50px 0;
 }
 
@@ -152,8 +160,6 @@ a:visited {
 
 }
 .footer-name {
-    font-size: 2em;
-    color: white;
     background-color: $base-color;
     margin: auto;
     float: left;
