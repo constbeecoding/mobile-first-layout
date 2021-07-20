@@ -86,6 +86,10 @@ a:visited {
   color: #000;
 }
 
+.top a {
+  font-size: 1rem;
+}
+
 /* ===== Base Layout Styles=====*/
 /*Header and Main Navigation*/
 .intro-img {
@@ -107,7 +111,7 @@ a:visited {
 .name, .footer-name {
   font-family: "Caveat", cursive;
   color: #f7dbf0;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .headergrey {
