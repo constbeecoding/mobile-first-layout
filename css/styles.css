@@ -119,6 +119,10 @@ a:visited {
   text-transform: uppercase;
 }
 
+.col p {
+  color: #000;
+}
+
 .portfolio-img {
   max-width: 100%;
   display: block;
