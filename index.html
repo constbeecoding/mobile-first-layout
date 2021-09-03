@@ -19,11 +19,11 @@
 <body>
  <!-- HEADER/MAIN NAV-->   
 
-    <header id="top" class="main-header">
+    <header id="top" class="main-header flex">
             
         <h1 class="name">Luna Bee</h1>
             <nav class="main-nav">      
-                <ul>
+                <ul class="flex">
                         <li><a href="#">Home</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -34,20 +34,17 @@
     </header>
 
 <!--PAGE CONTENT-->
-
-         
     <main>
-        <div id="intro">
-            <!-- Intro Top of Page-->
-            
+<!-- Intro Top of Page-->
+        <div id="intro" class="intro flex">
                  <img src="images/portrait.jpg" alt="Portrait of Luna looking up with purle, curly hair." class="intro-img">
-                    <p class="intro">Greetings! I study web development at Treehouse Tech via their Ubora Program. I'm studying: Front End (HTML, CSS, Javascript, Sass, UI/UX Design, Using APIs, React) and helping Non-Profits with tech. I have my Bachelors in Japanese Language and TESOL and currently work as a financial manager helping clients who have developmental disabilities.</p>
+                    <p>Greetings! I study web development at Treehouse Tech via their Ubora Program. I'm studying: Front End (HTML, CSS, Javascript, Sass, UI/UX Design, Using APIs, React) and helping Non-Profits with tech. I have my Bachelors in Japanese Language and TESOL and currently work as a financial manager helping clients who have developmental disabilities.</p>
              </div>   
              
              
             <!-- All the Portfolio Goodness-->
             
-                <div id="portfolio" class="portfolio clearfix"> 
+                <div id="portfolio" class="portfolio flex"> 
                 <h2 class="headergrey">Portfolio</h2>
                 
 
@@ -79,12 +76,12 @@
  
             
             <!--Skills-->
-            <div class="skills" id="skills">
+            <div class="skills flex" id="skills">
                 <h2>Skills</h2>
                 <p> (Psst! Click each skill to learn more about it!)</p>
-                <ul>
-                    <li><a href="https://blog.teamtreehouse.com/what-is-front-end-web-development" target="_blank">Front-End Development</a></li>
-                    <li><a href="https://blog.teamtreehouse.com/what-is-ux-design" target="_blank">UI/UX Design</a></li>
+                <ul class="flex">
+                    <li><a href="https://blog.teamtreehouse.com/what-is-ux-design" target="_blank">UI/UX</a></li>
+                    <li><a href="https://blog.teamtreehouse.com/what-is-front-end-web-development" target="_blank">Front-End Dev</a></li>
                     <li><a href="https://www.figma.com"  target="_blank">Figma</a></li>
                     <li><a href="https://sass-lang.com/"  target="_blank">SASS</a></li>
 
@@ -93,7 +90,7 @@
 
 
             <!--Contact-->    
-            <div class="contact" id="contact">
+            <div class="contact flex" id="contact">
                 <h2>Contact</h2>
                     <p>I always want to cast more web spells! Reach out if you want to collaborate!</p>
                     <p>Phone +1 (111) 555-1234</p>
@@ -103,11 +100,11 @@
     </main>
 
 <!--FOOTER-->
-    <footer>
+    <footer class="flex">
          
             <h1 class="footer-name">Luna Bee</h1>
             <nav>
-                <ul class="footer-nav bottom">
+                <ul class="footer-nav">
                     <li><a href="#top">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
