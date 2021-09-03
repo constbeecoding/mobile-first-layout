@@ -5,11 +5,16 @@
 $base-color: #6b5d8c;
 $main-text: #fff;
 $portfolio-bg: #fff;
+$mobile-link: #000;
 
+/*-----BASE ELEMENT STYLES-----*/
 
-/*Base Element Styles*/
 * {
     box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
 }
 
 body {
@@ -22,17 +27,16 @@ body {
 
 p {
     font-size: 1.4em;
-    font-weight: lighter;
     text-align: center;
-    margin: 20px 20px;
     padding: 10px;
     letter-spacing: .1em;
 }
 
 li {
-    display: block;
     list-style-type: none;
     font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: bold;
     background-color: $main-text;
     margin: 5px 10px;
     padding: 20px;
@@ -43,142 +47,147 @@ li {
 h1 {
     text-align: center;
     font-size: 2em;
-    margin: 0;
     color: $main-text;
-    background-color: $base-color;
-
 }
 
 h2 {
+    flex-basis: 100%;
     font-size: 2em;
     text-align: center;
-    color: $main-text;
+    text-transform: uppercase;
 }
+
 h3 {
     font-size: 2em;
     text-align: center;
+    letter-spacing: .1em;
     color: grey; 
 }
 
 ul {
     margin: 0;
-    width: 100%;
     padding-left: 0;
-
 }
 
 footer {
+    justify-content: space-between;
+    align-items: center;
     border-top: solid $main-text 2px;
-    bottom: 0;
     padding: 20px;
-    width: 100%;
     height: 100px;
 }
 
- /*Link Styles*/
- a {
+ /*-----LINK STYLES-----*/
+
+a {
+    color: $mobile-link;
     text-decoration: none;
     padding: 10px;
     text-transform: uppercase;
 }
+
 a:hover {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 a:visited {
-    color: #000;
+    color: rgb(224, 209, 68);
 }
 
 .top a {
+    font-weight: 600;
     font-size: 1rem;
 }
+
 /* ===== Base Layout Styles=====*/
 
-/*Header and Main Navigation*/
+/*-----HEADER/MAIN NAV------*/
+
+.main-header {
+    flex-direction: column;
+    margin: 10px;
+}
+
+.main-nav ul{
+    flex-direction: column;
+}
+
+/*-----INTRO------*/
+
 .intro-img {
-    display: block;
-    margin: 0;
-    width: 100%;
     padding: 70px;
     border-radius: 50%;
 }
 
 .intro {
-    margin: 0 20px 20px 20px;
-
+    flex-direction: column;
+    margin: 10px;
 }
 
-.name {
-    margin: 20px;
-
-}
+/*-----STYLED NAME-----*/
 
 .name, .footer-name {
     font-family: 'Caveat', cursive;
     color:#f7dbf0;
-    font-size: 2em;
+    font-size: 40px;
+    margin: 20px;
 }
+
+/*-----PORTFOLIO-----*/
 
 .headergrey {
     color: grey;
     text-transform: uppercase;
-
 }
 
 .col p {
     color: #000;
-
-}
-.portfolio-img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
-    padding: 10px;
-    
-}
-
-.portfolio-img:hover {
-    opacity: 0.5;
-
 }
 
 .portfolio {
-    width: 100%;
+    flex-direction: column;
     background-color: $portfolio-bg;
-    padding: 50px 0;
+    padding: 50px 15px;
+
+    img {
+        display: block;
+        max-width: 100%;
+        padding: 10px;
+
+        &:hover {
+            opacity: 0.5;
+            transition: ease-in .5s;
+        }
+    }
 }
 
-.nav li{
-    display: block;
-    margin-top: 5px;
+/*-----SKILLS/CONTACT------*/
+
+.skills, 
+.contact {
+    flex-direction: column;
     padding: 10px;
-    text-align: center;
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        background: none;
+    }
 }
 
- 
+/*-----FOOTER------*/
 
-.skills li {
-    background-color: $base-color;
-
-
-}
-.footer-name {
-    background-color: $base-color;
-    margin: auto;
-    float: left;
+.footer-nav a {
+    color: $main-text;
 }
 
-.top{
-    background-color: $base-color;
-    margin: auto;
-    float: right;
-}
+/*-----HIDES FOOTER NAV ON MOBILE-----*/
 
-/*Footer Navigation*/
-.bottom {
+.footer-nav {
     display: none;
 }
