@@ -1,12 +1,15 @@
 /* ============================================ */
 /*               Media Queries                  */
 /* ============================================ */
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 $portfolio-bg: #fff;
+$main-text: #fff;
 
-/* Note: Hide Footer Nav on Mobile - only display "back to top" */
+//*TABLET BREAKPOINT*//
 
-@media (min-width: 768px)  {
+@media (min-width: $breakpoint-tablet)  {
 
     ul{
         margin: auto;
@@ -14,192 +17,90 @@ $portfolio-bg: #fff;
     }
 
     li {
-        display: inline-block;
         background: none;
-     }   
+    }
+
+    .name {
+        padding: 20px; 
+    }
+
+    .main-header{
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
 
     .intro-img {
-        margin: 0 20px 20px 0;
-        float: right;
-        max-width: 30%;
+        margin: 20px;
+        max-width: 33.33%;
         padding: 20px;
         border-radius: 50%;
     }
 
-    .name {
-        margin-top: 20px;
-        clear: both;
-        padding: 20px;
-        
-    }
-    .main-nav {
-        width: 100%;
-    }
-
     .intro {
-        display: block;  
-        float: left;
-        font-size: 1.4em;
-        font-weight: lighter;
-        letter-spacing: .1em;
-        line-height: 1.5em;
-        margin: 20px 0 0 20px;
-        width: 60%;
-        text-align: left;
-       
+        flex-direction: row-reverse;
+        align-items: center;
     }
 
     .portfolio {
-        display: block;  
-        background-color: $portfolio-bg;
-        clear: both;
+        flex-direction: row;
+        flex-wrap: wrap;
      }
-     
-    .portfolio-img {
-        display: block;
-        margin: auto;
-        
-    }
 
     .col {
-        float: left;
-        width: calc(50% - 5px);
-        margin-bottom: 0;
+        width: 50%;
     }
-
-    .contact {
-        text-align: center;
-    }
-
-    .footer-name {
-        display: block;
-        margin: 10px 0;
-        float: left;
-        
-    }
-    .footer-nav {
-        display: block;
-      }
-      
-      .footer-nav ul {
-          float: right;
-      }
-  
-      .footer-nav li {
-          padding: 15px;
-          margin: 5px;
-      }
-  
-
-    .top {
-         display: none;
-     }
-
-
-}
     
-@media (min-width: 1024px)  {
-        
-
-    ul{
-        margin: auto;
-        text-align: right;
-        padding: 0 10px 20px 0;
-        
-    }
-
-    li {
-        display: inline-block;
-        background: none;
-        
-     }   
-
-    .intro-img {
-        float: right;
-        margin: 0 20px 45px 0;
-        border-radius: 50%;
-    }
-
-    .name {
-        display: block;
-        margin: auto;
-        float: left;
-        
-    }
-    .main-nav ul{
-        width: 100%;
-        margin: auto;
-        display: block;
-    }
-
-    .intro {
-        display: block;  
-        text-align: left;
-        font-size: 1.4em;
-        font-weight: lighter;
-        letter-spacing: .1em;
-        line-height: 1.5em;
-        margin: 20px 20px;
-        padding: 50px;
-        width: 60%;
-        
-    }
-
-    .portfolio {
-        display: block;  
-        background-color: $portfolio-bg;
-        clear: both;
-        border-radius: 5%;
-     }
-     
-    .portfolio-img {
-        max-width: 100%;
-        display: block;
-        margin: auto;
-    }
-
-    .col {
-        width: calc(33.333%);
-       }
-      
-
     .skills ul {
-        text-align: center;
-
+        flex-direction: row;
     }
+
     .contact {
+        margin: 20px 0;
+        padding: 20px;
         text-align: center;
     }
 
-    .footer-name {
-        display: block;
-        margin: 15px 0;
-        float: left;
-        
-    }
     .footer-nav {
-      display: block;
-    }
-    
-    .footer-nav ul {
-        float: right;
-    }
+        display: flex;
 
-    .footer-nav li {
-        padding: 15px;
-        margin: 5px;
-    }
+        li {
+            padding: 15px;
+            margin: 5px; 
+        }
+      }
 
     .top {
          display: none;
      }
 
+
+}
+    
+
+//*DESKTOP BREAKPOINT*//
+
+@media (min-width: $breakpoint-desktop)  {
+        
+
+    .main-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
+    .intro {
+        font-size: 1.1em;   
+    }
 
-/*Float Clearfix-------------------------------*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+    .portfolio {
+        border-radius: 7%;
+     }
+
+    .col {
+        width: 33.33%;
+       }
+    }
