@@ -1,9 +1,13 @@
 /* ============================================ */
 /*                Base Styles                   */
 /* ============================================ */
-/*Base Element Styles*/
+/*-----BASE ELEMENT STYLES-----*/
 * {
   box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
 }
 
 body {
@@ -16,17 +20,16 @@ body {
 
 p {
   font-size: 1.4em;
-  font-weight: lighter;
   text-align: center;
-  margin: 20px 20px;
   padding: 10px;
   letter-spacing: 0.1em;
 }
 
 li {
-  display: block;
   list-style-type: none;
   font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: bold;
   background-color: #fff;
   margin: 5px 10px;
   padding: 20px;
@@ -37,39 +40,39 @@ li {
 h1 {
   text-align: center;
   font-size: 2em;
-  margin: 0;
   color: #fff;
-  background-color: #6b5d8c;
 }
 
 h2 {
+  flex-basis: 100%;
   font-size: 2em;
   text-align: center;
-  color: #fff;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 2em;
   text-align: center;
+  letter-spacing: 0.1em;
   color: grey;
 }
 
 ul {
   margin: 0;
-  width: 100%;
   padding-left: 0;
 }
 
 footer {
+  justify-content: space-between;
+  align-items: center;
   border-top: solid #fff 2px;
-  bottom: 0;
   padding: 20px;
-  width: 100%;
   height: 100px;
 }
 
-/*Link Styles*/
+/*-----LINK STYLES-----*/
 a {
+  color: #000;
   text-decoration: none;
   padding: 10px;
   text-transform: uppercase;
@@ -83,37 +86,45 @@ a:hover {
 }
 
 a:visited {
-  color: #000;
+  color: #e0d144;
 }
 
 .top a {
+  font-weight: 600;
   font-size: 1rem;
 }
 
 /* ===== Base Layout Styles=====*/
-/*Header and Main Navigation*/
+/*-----HEADER/MAIN NAV------*/
+.main-header {
+  flex-direction: column;
+  margin: 10px;
+}
+
+.main-nav ul {
+  flex-direction: column;
+}
+
+/*-----INTRO------*/
 .intro-img {
-  display: block;
-  margin: 0;
-  width: 100%;
   padding: 70px;
   border-radius: 50%;
 }
 
 .intro {
-  margin: 0 20px 20px 20px;
+  flex-direction: column;
+  margin: 10px;
 }
 
-.name {
-  margin: 20px;
-}
-
+/*-----STYLED NAME-----*/
 .name, .footer-name {
   font-family: "Caveat", cursive;
   color: #f7dbf0;
-  font-size: 2em;
+  font-size: 40px;
+  margin: 20px;
 }
 
+/*-----PORTFOLIO-----*/
 .headergrey {
   color: grey;
   text-transform: uppercase;
@@ -123,48 +134,43 @@ a:visited {
   color: #000;
 }
 
-.portfolio-img {
-  max-width: 100%;
-  display: block;
-  margin: auto;
-  padding: 10px;
-}
-
-.portfolio-img:hover {
-  opacity: 0.5;
-}
-
 .portfolio {
-  width: 100%;
+  flex-direction: column;
   background-color: #fff;
-  padding: 50px 0;
+  padding: 50px 15px;
 }
-
-.nav li {
+.portfolio img {
   display: block;
-  margin-top: 5px;
+  max-width: 100%;
   padding: 10px;
-  text-align: center;
+}
+.portfolio img:hover {
+  opacity: 0.5;
+  transition: ease-in 0.5s;
 }
 
-.skills li {
-  background-color: #6b5d8c;
+/*-----SKILLS/CONTACT------*/
+.skills,
+.contact {
+  flex-direction: column;
+  padding: 10px;
+}
+.skills ul,
+.contact ul {
+  flex-direction: column;
+}
+.skills li,
+.contact li {
+  background: none;
 }
 
-.footer-name {
-  background-color: #6b5d8c;
-  margin: auto;
-  float: left;
+/*-----FOOTER------*/
+.footer-nav a {
+  color: #fff;
 }
 
-.top {
-  background-color: #6b5d8c;
-  margin: auto;
-  float: right;
-}
-
-/*Footer Navigation*/
-.bottom {
+/*-----HIDES FOOTER NAV ON MOBILE-----*/
+.footer-nav {
   display: none;
 }
 
@@ -513,7 +519,6 @@ template {
 /* ============================================ */
 /*               Media Queries                  */
 /* ============================================ */
-/* Note: Hide Footer Nav on Mobile - only display "back to top" */
 @media (min-width: 768px) {
   ul {
     margin: auto;
@@ -521,75 +526,56 @@ template {
   }
 
   li {
-    display: inline-block;
     background: none;
   }
 
+  .name {
+    padding: 20px;
+  }
+
+  .main-header {
+    flex-direction: column;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .intro-img {
-    margin: 0 20px 20px 0;
-    float: right;
-    max-width: 30%;
+    margin: 20px;
+    max-width: 33.33%;
     padding: 20px;
     border-radius: 50%;
   }
 
-  .name {
-    margin-top: 20px;
-    clear: both;
-    padding: 20px;
-  }
-
-  .main-nav {
-    width: 100%;
-  }
-
   .intro {
-    display: block;
-    float: left;
-    font-size: 1.4em;
-    font-weight: lighter;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    margin: 20px 0 0 20px;
-    width: 60%;
-    text-align: left;
+    flex-direction: row-reverse;
+    align-items: center;
   }
 
   .portfolio {
-    display: block;
-    background-color: #fff;
-    clear: both;
-  }
-
-  .portfolio-img {
-    display: block;
-    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .col {
-    float: left;
-    width: calc(50% - 5px);
-    margin-bottom: 0;
+    width: 50%;
+  }
+
+  .skills ul {
+    flex-direction: row;
   }
 
   .contact {
+    margin: 20px 0;
+    padding: 20px;
     text-align: center;
   }
 
-  .footer-name {
-    display: block;
-    margin: 10px 0;
-    float: left;
-  }
-
   .footer-nav {
-    display: block;
+    display: flex;
   }
-
-  .footer-nav ul {
-    float: right;
-  }
-
   .footer-nav li {
     padding: 15px;
     margin: 5px;
@@ -600,102 +586,24 @@ template {
   }
 }
 @media (min-width: 1024px) {
-  ul {
-    margin: auto;
-    text-align: right;
-    padding: 0 10px 20px 0;
-  }
-
-  li {
-    display: inline-block;
-    background: none;
-  }
-
-  .intro-img {
-    float: right;
-    margin: 0 20px 45px 0;
-    border-radius: 50%;
-  }
-
-  .name {
-    display: block;
-    margin: auto;
-    float: left;
-  }
-
-  .main-nav ul {
-    width: 100%;
-    margin: auto;
-    display: block;
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .intro {
-    display: block;
-    text-align: left;
-    font-size: 1.4em;
-    font-weight: lighter;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    margin: 20px 20px;
-    padding: 50px;
-    width: 60%;
+    font-size: 1.1em;
   }
 
   .portfolio {
-    display: block;
-    background-color: #fff;
-    clear: both;
-    border-radius: 5%;
-  }
-
-  .portfolio-img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
+    border-radius: 7%;
   }
 
   .col {
-    width: calc(33.333%);
-  }
-
-  .skills ul {
-    text-align: center;
-  }
-
-  .contact {
-    text-align: center;
-  }
-
-  .footer-name {
-    display: block;
-    margin: 15px 0;
-    float: left;
-  }
-
-  .footer-nav {
-    display: block;
-  }
-
-  .footer-nav ul {
-    float: right;
-  }
-
-  .footer-nav li {
-    padding: 15px;
-    margin: 5px;
-  }
-
-  .top {
-    display: none;
+    width: 33.33%;
   }
 }
-/*Float Clearfix-------------------------------*/
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ============================================ */
 /*             Components Imports               */
 /* ============================================ */
